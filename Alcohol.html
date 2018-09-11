@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国威酱酒</title>
+    <link rel="stylesheet" href="css/Alcohol.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var pixelRatio = 1 / window.devicePixelRatio; //还原设备的真实分辨率；
+        //devicePixelRatio设备的像素比；
+        document.write('<meta name="viewport" content="width=device-width,initial-scale=' + pixelRatio + ',minimum-scale=' + pixelRatio + ',maximum-scale=' + pixelRatio + '" />');
+        var html = document.getElementsByTagName('html')[0];
+        var pageWidth = html.getBoundingClientRect().width;
+        html.style.fontSize = pageWidth / 10 + "px";
+    </script>
+</head>
+<body id="body">
+    <img src="img/1.jpg" alt="" class="main">
+    <img src="img/2.jpg" alt="" class="main">
+    <img src="img/3.jpg" alt="" class="main">
+    <img src="img/4.jpg" alt="" class="main">
+    <section>
+        <p>添加微信：  MTHJ18  了解国威酱酒更多系列产品和优惠</p>
+        <form action="" id="form">
+            <span> <img src="img/tita.gif" alt=""></span>
+            <ul>
+                <li>
+                    <div>
+                        <span>*</span>产品
+                    </div>
+                    <div>
+                        <p id="box1">
+                            <img src="img/5.jpg" alt=""> &nbsp;国威 53°酱香:（1箱4瓶）买1箱送1箱  336元
+                            <a>√</a>
+                        </p>
+                        <p  id="box2">
+                            <img src="img/5.jpg" alt=""> &nbsp;国威 53°酱香:（1箱4瓶）买3箱送3箱  968元
+                             <a>√</a>
+                        </p>
+                        <p  id="box3">
+                            <img src="img/5.jpg" alt=""> &nbsp;国威 53°酱香:（1箱4瓶）买5箱送6箱  1680元
+                             <a>√</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div><span>*</span>数量</div>
+                    <div id="num">
+                        <span @click="ass" id="jian">-</span>
+                        <span><input type="text" value="1" class="input1" disabled='disabled'></span>
+                        <span @click="add" id="jia">+</span>
+                    </div>
+                </li>
+                <li>
+                    <div><span>*</span>姓名</div>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <div><span>*</span>手机</div>
+                    <div><input type="text"></div>
+                </li>
+                <li>
+                    <div><span>*</span>地区</div>
+                    <div>
+                        <select class="select">
+                            <option>请选择</option>
+                            <option value="option1">辽宁</option>
+                            <option value="option2">云南</option>
+                            <option value="option3">江苏</option>
+                            <option value="option3">江西</option>
+                            <option value="option3">四川</option>
+                            <option value="option3">湖北</option>
+                            <option value="option3">广西</option>
+                            <option value="option3">黑龙江</option>
+                            <option value="option3">山东</option>
+                            <option value="option3">浙江</option>
+                            <option value="option3">湖南</option>
+                            <option value="option3">安徽</option>
+                            <option value="option3">甘肃</option>
+                            <option value="option3">新疆</option>
+                            <option value="option3">山西</option>
+                            <option value="option3">广东</option>
+                            <option value="option3">海南</option>
+                            <option value="option3">青海</option>
+                            <option value="option3">贵州</option>
+                            <option value="option3">河南</option>
+                            <option value="option3">重庆</option>
+                            <option value="option3">福建</option>
+                            <option value="option3">北京</option>
+                            <option value="option3">内蒙古</option>
+                            <option value="option3">吉林</option>
+                            <option value="option3">陕西</option>
+                            <option value="option3">河北</option>
+                            <option value="option3">宁夏</option>
+                            <option value="option3">天津</option>
+                            <option value="option3">上海</option>
+                            <option value="option3">西藏</option>
+
+                        </select>
+                        <select class="select">
+                            <option></option>
+                        </select>
+                        <select class="select1">
+                            <option></option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <div><span>*</span>地址</div>
+                    <div><input type="text"></div>
+                </li>
+                <li>
+                    <div><span>*</span>金额</div>
+                    <div><span class="money"><input type="text" value="336" class="input2" disabled='disabled'></span>&nbsp;元</div>
+                </li>
+                <li>
+                    <div><span>*</span>付款</div>
+                    <div>
+                        <input type="radio" name="radio1" class="radio1"><img src="img/hdfk.png" alt="">
+                        <input type="radio" name="radio1" class="radio1"><img src="img/wxpay.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div><span>*</span>提示</div>
+                    <div>添加微信:【MTHJ18】了解更多国威酱酒更多系列产品和优惠</div>
+                </li>
+                <li>
+                    <div>留言</div>
+                    <div><textarea cols="30" rows="5" class="userMassage"></textarea></div>
+                </li>
+                <button class="submit">立即提交订单</button>
+            </ul>
+            <div class="query">
+                <p><img src="img/titc.gif" alt=""></p>
+                <p>请在下方输入手机号码，然后点查询</p>
+                <p><input type="text"><button class="submit1">查询</button></p>
+                <p>温馨提示：你可以在收货前随时查询自己的订单，掌握订单物流的最新动态，方便自己的收货时间安排。</p>
+            </div>
+        </form>
+    </section>
+    <footer>
+        贵州茅台镇国威酒业（集团）有限责任公司 黔ICP备17010318号2
+    </footer>
+    <ol>
+        <li><a href="#body"><img src="img/6.png" alt="">返回首页</a></li>
+        <li><a href="tel:18712371567"><img src="img/7.png" alt="">电话咨询</a></li>
+        <li><a href="#form"><img src="img/6.png" alt="">在线下单</a></li>
+    </ol>
+    <script src="js/Alcohol.js"></script>
+</body>
+</html>
